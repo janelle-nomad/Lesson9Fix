@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.UserTb = new System.Windows.Forms.TextBox();
             this.PasswordTb = new System.Windows.Forms.Label();
             this.LoginBtn = new System.Windows.Forms.Button();
             this.MessegeLbl = new System.Windows.Forms.Label();
+            this.PassTb = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -46,20 +46,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
-            // textBox1
+            // UserTb
             // 
-            this.textBox1.Location = new System.Drawing.Point(71, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(71, 145);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(223, 20);
-            this.textBox2.TabIndex = 3;
+            this.UserTb.Location = new System.Drawing.Point(70, 89);
+            this.UserTb.Name = "UserTb";
+            this.UserTb.Size = new System.Drawing.Size(223, 20);
+            this.UserTb.TabIndex = 3;
             // 
             // PasswordTb
             // 
@@ -73,13 +65,15 @@
             // 
             // LoginBtn
             // 
+            this.LoginBtn.BackColor = System.Drawing.Color.Azure;
             this.LoginBtn.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBtn.Location = new System.Drawing.Point(101, 208);
+            this.LoginBtn.Location = new System.Drawing.Point(220, 197);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(162, 23);
+            this.LoginBtn.Size = new System.Drawing.Size(73, 23);
             this.LoginBtn.TabIndex = 4;
             this.LoginBtn.Text = "Login";
-            this.LoginBtn.UseVisualStyleBackColor = true;
+            this.LoginBtn.UseVisualStyleBackColor = false;
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // MessegeLbl
             // 
@@ -91,17 +85,25 @@
             this.MessegeLbl.TabIndex = 5;
             this.MessegeLbl.Text = "Please Log in";
             // 
+            // PassTb
+            // 
+            this.PassTb.Location = new System.Drawing.Point(70, 152);
+            this.PassTb.Name = "PassTb";
+            this.PassTb.PasswordChar = '*';
+            this.PassTb.Size = new System.Drawing.Size(223, 20);
+            this.PassTb.TabIndex = 6;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(363, 340);
+            this.Controls.Add(this.PassTb);
             this.Controls.Add(this.MessegeLbl);
             this.Controls.Add(this.LoginBtn);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.UserTb);
             this.Controls.Add(this.PasswordTb);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "LoginForm";
             this.Text = "Login Form";
@@ -113,11 +115,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox UserTb;
         private System.Windows.Forms.Label PasswordTb;
         private System.Windows.Forms.Button LoginBtn;
         private System.Windows.Forms.Label MessegeLbl;
+        private System.Windows.Forms.TextBox PassTb;
     }
 }
 
